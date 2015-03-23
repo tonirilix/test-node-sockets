@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class='col-md-8 center-block card no-float big-padding top-space'>
+		<h1>Username:</h1>
+		<input type="text" class="form-control big-padding" placeholder="username" id="username">
+		<p></p>
+		<button class="special-btn red-btn top-space" id='save_username'>
+			Guardar
+		</button>
+	</section>
+	<script>
+		window.addEventListener('load',init);
+
+		function init(){
+			document.querySelector('#save_username').addEventListener('click',function(){
+				var username = document.querySelector('#username').value;
+				localStorage.setItem("username",username);
+				window.location = "chat_room.html";
+			});
+		}
+	</script>
+</body>
+</html>

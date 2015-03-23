@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bienvenido</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flat-ui.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src='http://localhost:8080/socket.io/socket.io.js'></script>
+</head>
+<body>
+	<div id='form_room' class="absolute be-blue white col-md-2 no-float" style="top:75%;left:83%;">
+        <h4>Create room</h4>
+        <div class='form-group'>
+			<input type="text" class='form-control' id='room_name' placeholder="Room's name">
+		</div>
+		<div class='text-center'>
+			<button class="btn btn-info" id="room_btn">
+				Save room
+			</button>
+			
+		</div>
+	</div>
+        <div id='credits' class='hidden_card'>
+            <div class='close forward_back'><i class="glyphicon glyphicon-remove"></i></div>
+            <p>Marcos Uriel Hernández Camacho</p>
+            <p>uriel@codigofacilito.com</p>
+        </div>
+        <div class='row full-height'>
+            <div class='col-md-10'>
+                <h1>Bienvenido <span id="usuario"></span></h1>
+            </div>
+            <section id="chats"></section>
+            <div class='col-md-2 full-height be-white' id="chat_rooms">
+                <div class='row be-blue radius white'>
+                    <div class='col-md-6 text-center '>
+                        <i class='glyphicon glyphicon-user'></i>
+                    </div>
+                    <div class='col-md-6 text-center '>
+                        <i class='glyphicon glyphicon-book'></i>
+                    </div>
+                </div>
+                <div class='text-center large-padding'>
+                    <!--
+                    <div class='top-space'>
+                        <button class='btn btn-info' id='activar_notificacion'>Activar notificaciones</button>
+                    </div>
+                    -->
+                </div>
+                <ul id='usernames' class='no-list'>
+                    
+                </ul>
+                <a class='blue' href='close_session.jsp'>Cerrar sesión</a><br>
+                <a href='#' class='bring_back' data-selector='#credits'>Créditos</a>
+            </div>
+        </div>
+	<script src='local_storage.js'></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/ui.js"></script>
+	<script src='chat.js'></script>
+</body>
+</html>
